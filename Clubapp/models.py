@@ -32,9 +32,6 @@ class Meeting_Minutes(models.Model):
 
 
 
-
-
-
 class Resource (models.Model):
     ResourceName=models.CharField(max_length=255)
     ResourceType=models.CharField(max_length=255)
@@ -42,8 +39,6 @@ class Resource (models.Model):
     DateEntered=models.DateField()
     UserID=models.ForeignKey(User,on_delete=models.DO_NOTHING)
     Description=models.TextField()
-
-
 
 
     def __str__(self):
