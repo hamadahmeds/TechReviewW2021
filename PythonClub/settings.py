@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for PythonClub project.
 
@@ -52,11 +54,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'PythonClub.urls'
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+STATIC_URL = '/static/'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(os.path.dirname('DjangoProject'), 'templates'),],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,3 +129,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
