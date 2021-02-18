@@ -27,7 +27,7 @@ class Meeting_Minutes(models.Model):
     
     class Meta:
         db_table='meeting minutes'
-        verbose_name_plural=''
+        verbose_name_plural='meeting_minutes'
 
 
 
