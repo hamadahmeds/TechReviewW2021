@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Meeting, Meeting_Minutes, Event, Resource
 import datetime
-# import .forms Meeting
+from .forms import MeetingForm
 
 
 
@@ -30,10 +30,13 @@ class ResourceTest(TestCase):
 class MeetingType_Form_Test(TestCase):
     def test_typeform_is_valid(self):
         data={
-            {'meetingtittle': "meeting2",
-            'meetingdate' : "2021-02-24",
-            'meetinglocation' : "seattle wa"
-            }
+            'MeetingTittle':'meeting',
+            'MeetingDate':'2021-02-24',
+            'Location':'seattle wa',
+            'MeetingTime':'13:00:00',
+            'Agenda':'meeing agenda'
+
+
          }
-    from=MeetingForm (date)
-    self.assertTrue(form.is_valid)
+        form=MeetingForm (data)
+        self.assertTrue(form.is_valid)
