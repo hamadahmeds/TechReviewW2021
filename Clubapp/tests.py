@@ -26,6 +26,7 @@ class ResourceTest(TestCase):
          self.assertEqual(str(self.type), 'meeting minutes')
 
 #Form tests IS NOT WORKING FOR ME , WILL HAVE TO TRY IT AGIN 
+
 class MeetingType_Form_Test(TestCase):
     def test_typeform_is_valid(self):
         data={

@@ -28,11 +28,7 @@ def meetingDetail(request, id ):
     meeting=get_object_or_404(Meeting, pk=id)
     return render(request, 'Clubapp/meetingdetail.html', {'meeting':meeting})
 
-
-
-
-
-# // here the form start to see if the post or not and save  // 
+# // here the form start to see if the post or not and save the   // 
 
 def newMeeting(request):
     form=MeetingForm
