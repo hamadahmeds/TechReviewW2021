@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
 <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
-<link rel="stylesheet" type="text/cxs" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'clubapp/main.css' %}">
 
 
 </head> 
@@ -23,9 +23,12 @@
   </div> 
   <ul class="nav navbar-nav"> 
   <!-- her will be all manue options  -->
-  <li><a href="{% url 'meeting' %}">meeting</a></li>
-
-<li>Dummy</li> 
+  <li><a href="{% url 'meeting' %}">meetings</a></li>
+<!-- the forms  -->
+<li><a href="{% url 'newmeeting' %}">Add meeting </a></li> 
+<!-- users regastering log in and out  -->
+<li><a href="{% url 'login' %}">login </a></li> 
+<li><a href="{% url 'logout' %}">logout </a></li> 
 
 </ul> 
 </div> 
